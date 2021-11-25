@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Student</title>
+        <meta charset="UTF-8">
+        <script type="text/javascript" src="../../static/js/utils.js?0"></script>
+        <script type="text/javascript" src="../../static/js/student.js?0"></script>
+        <script>
+            window.onload=function() {
+                forAll();
+                verify_login_status();
+                normal_greet();
+                get_student_info();
+            }
+        </script>
+    </head>
+    <body>
+        <!--Header-->
+        <div>
+            <a href="/change_password"><input type="button" value='Change Password'></a>
+            <button onclick="logout()">Logout</button>
+        </div>
+        <!--Welcome-->
+        <div>
+            <span id="welcome"></span>
+        </div>
+        <!--Assignments-->
+        <div>
+            <label id="show-which">
+                <span>Assignments</span>
+                <br>
+                <button class="course-filter" id="course-all" style="background:lightgrey" onclick="show('all')">All</button>
+            </label>
+            <table id="assignment-table" border="1">
+            </table>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Add Assignment - Basket</title>
+        <meta charset="UTF-8">
+        <script type="text/javascript" src="../../static/js/utils.js?0"></script>
+        <script type="text/javascript" src="../../static/js/teacher.js?0"></script>
+        <script>
+            window.onload=function() {
+                forAll();
+                verify_login_status();
+                init_date_selector();
+            }
+        </script>
+    </head>
+    <body>
+        <!--Header-->
+        <div>
+            <a href="/teacher"><input type="button" value='Home'></a>
+            <button onclick="logout()">Logout</button>
+        </div>
+        <!--Add assignment-->
+        <div>
+            <span>Add assignment</span>
+            <br>
+            <label>
+                <span>Assignment name: </span>
+                <input type="text" id="assignment-name" />
+            </label>
+            <br>
+            <label>
+                <span>Requirement: </span>
+                <br>
+                <textarea id="requirement"></textarea>
+            </label>
+            <br>
+            <label id="upload-section">
+                <span>Upload files: </span>
+                <input type="file" id="files" name="files" multiple>
+                <button onclick="upload()">Upload</button>
+            </label>
+            <br>
+            <label>
+                <span>Submission types:</span>
+                <input checked id="submit-text" type="checkbox"/>Text
+                <input checked id="submit-file" type="checkbox"/>Files
+            </label>
+            <br>
+            <label>
+                <span>Due date (China Time): </span>
+                <table>
+                    <tbody id="date-table-body">
+                        <tr id="title-headline">
+                            <th>Year</th>
+                            <th>Month</th>
+                            <th>Day</th>
+                            <th>Hour</th>
+                            <th>Minute</th>
+                        </tr>
+                        <tr id="local-time">
+                            <td><select id="selYear"></select></td>
+                            <td><select id="selMonth"></select></td>
+                            <td><select id="selDay"></select></td>
+                            <td><select id="hour"></select></td>
+                            <td><select id="minute"></select></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </label>
+        </div>
+        <button onclick="add_assignment();">Done</button>
+        <br>
+    </body>
+</html>

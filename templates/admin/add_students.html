@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Add Students - Basket</title>
+        <meta charset="UTF-8">
+        <script type="text/javascript" src="../../static/js/utils.js?0"></script>
+        <script type="text/javascript" src="../../static/js/admin.js?0"></script>
+        <script>
+            window.onload=function() {
+                forAll();
+                verify_login_status();
+            }
+        </script>
+    </head>
+    <body>
+        <!--Header-->
+        <div>
+            <a href="/admin"><input type="button" value='Home'></a>
+            <button onclick="logout()">Logout</button>
+        </div>
+        <!--Add student-->
+        <span>Add students</span>
+        <br>
+        <label>
+            <span>Students(comma-separated): </span>
+            <input type="text" id="student-names" />
+        </label>
+        <br>
+        <button onclick="add_students(document.getElementById('student-names').value)" id="done-button">Done</button>
+        <div id="pwd-table">
+        </div>
+    </body>
+</html>

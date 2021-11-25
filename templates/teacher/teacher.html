@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Teacher</title>
+        <meta charset="UTF-8">
+        <script type="text/javascript" src="../../static/js/utils.js?0"></script>
+        <script type="text/javascript" src="../../static/js/teacher.js?0"></script>
+        <script>
+            window.onload=function() {
+                forAll();
+                verify_login_status();
+                normal_greet();
+                get_teacher_info();
+            }
+        </script>
+    </head>
+    <body>
+        <!--Header-->
+        <div>
+            <a href="/change_password"><input type="button" value='Change Password'></a>
+            <button onclick="logout()">Logout</button>
+        </div>
+        <!--Welcome-->
+        <div>
+            <span id="welcome"></span>
+        </div>
+        <!--Add Assignment-->
+        <div>
+            <a href="/teacher/add_assignment"><input type="button" value='Add Assignment'></a>
+        </div>
+        <!--Assignments-->
+        <div>
+            <span>Assignments</span>
+            <table id="assignments-table" border="1">
+            </table>
+        </div>
+    </body>
+</html>

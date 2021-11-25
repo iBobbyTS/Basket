@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Basket</title>
+        <meta charset="UTF-8">
+        <script type="text/javascript" src="/static/js/login.js?0"></script>
+        <script type="text/javascript" src="/static/js/utils.js?0"></script>
+    </head>
+    <body>
+        <span>Put your work into the Basket</span>
+        <br>
+        <label>
+            <span>Username: </span>
+            <input type="text" id="usn" />
+        </label>
+        <br>
+        <label>
+            <span>Password: </span>
+            <input type="password" id="pwd" />
+        </label>
+        <br />
+        <button onclick="login(document.getElementById('usn').value, document.getElementById('pwd').value)">Login</button>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Assignment:&nbsp;</title>
+        <meta charset="UTF-8">
+        <script type="text/javascript" src="../../static/js/utils.js?0"></script>
+        <script type="text/javascript" src="../../static/js/student.js?0"></script>
+        <script>
+            window.onload=function() {
+                forAll();
+                verify_login_status();
+                get_assignment_info();
+            }
+        </script>
+    </head>
+    <body>
+        <!--Header-->
+        <div>
+            <a href="/student"><input type="button" value='Home'></a>
+            <button onclick="logout()">Logout</button>
+        </div>
+        <br>
+        <!--Assignment info-->
+        <div>
+            <span id="assignment-name">Assignment name:&nbsp</span>
+            <br>
+            <span id="requirement">Requirement:&nbsp</span>
+            <br>
+            <label id="assignment-files">
+            </label>
+            <br>
+            <span id="due-date">Due date:&nbsp</span>
+            <br><br>
+            <label id="submit">
+            </label>
+            <label id="submitted">
+            </label>
+        </div>
+
+    </body>
+</html>

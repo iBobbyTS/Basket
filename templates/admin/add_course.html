@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Add Course - Basket</title>
+        <meta charset="UTF-8">
+        <script type="text/javascript" src="../../static/js/utils.js?0"></script>
+        <script type="text/javascript" src="../../static/js/admin.js?0"></script>
+        <script>
+            window.onload=function() {
+                forAll();
+                verify_login_status();
+            }
+        </script>
+    </head>
+    <body>
+        <!--Header-->
+        <div>
+            <a href="/admin"><input type="button" value='Home'></a>
+            <button onclick="logout()">Logout</button>
+        </div>
+        <!--Add course-->
+        <span>Add course</span>
+        <br>
+        <label>
+            <span>Course name: </span>
+            <input type="text" id="course-name" />
+        </label>
+        <label>
+            <span>Teacher's name: </span>
+            <input type="text" id="teacher-name" />
+        </label>
+        <br>
+        <button onclick="add_course(document.getElementById('course-name').value, document.getElementById('teacher-name').value)">Done</button>
+    </body>
+</html>

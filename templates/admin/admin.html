@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Admin</title>
+        <meta charset="UTF-8">
+        <script type="text/javascript" src="../../static/js/utils.js?0"></script>
+        <script type="text/javascript" src="../../static/js/admin.js?0"></script>
+        <script>
+            window.onload=function() {
+                forAll();
+                verify_login_status();
+                greet();
+                get_admin_info()
+            }
+        </script>
+    </head>
+    <body>
+        <!--Header-->
+        <div>
+            <a href="/change_password"><input type="button" value='Change Password'></a>
+            <button onclick="logout()">Logout</button>
+        </div>
+        <!--Welcome-->
+        <div>
+            <span id="welcome"></span>
+        </div>
+        <br>
+        <!--Teacher-->
+        <div>
+            <div>
+                <span>Courses:</span>
+                <a href="admin/add_course"><input type="button" value='Add'></a>
+            </div>
+            <div>
+                <table id="course-table" border="1">
+                    <th>Course</th>
+                    <th>Teacher</th>
+                    <th></th>
+                </table>
+            </div>
+        </div>
+        <br>
+        <!--Student-->
+        <div>
+            <div>
+                <span>Students:</span>
+                <a href="admin/add_students"><input type="button" value='Add'></a>
+            </div>
+            <div>
+                <table id="students-table" border="1">
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
